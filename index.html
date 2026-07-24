@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YESSSSS!!!!!! AI — 2026: Love Is All You Need</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-hover: rgba(255, 255, 255, 0.07);
+    --text-primary: rgba(255, 255, 255, 0.92);
+    --text-secondary: rgba(255, 255, 255, 0.58);
+    --text-dim: rgba(255, 255, 255, 0.35);
+    --accent-warm: rgba(255, 200, 120, 0.7);
+    --accent-cool: rgba(140, 180, 255, 0.5);
+    --glow-soft: rgba(200, 170, 255, 0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: #06060e;
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(40, 20, 80, 0.3) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 30%, rgba(20, 40, 80, 0.25) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 80%, rgba(60, 30, 60, 0.15) 0%, transparent 40%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, rgba(255,220,160,0.95), rgba(200,180,255,0.9));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .subtitle {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin-bottom: 48px;
+    font-style: italic;
+  }
+
+  .hero .scroll-hint {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    animation: breathe 4s ease-in-out infinite;
+  }
+
+  @keyframes breathe {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+  }
+
+  /* --- Sections --- */
+  .story-section { padding: 80px 0; }
+
+  .story-text {
+    max-width: 640px;
+    margin: 0 auto 48px auto;
+    text-align: center;
+    padding: 0 24px;
+  }
+
+  .story-text p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.85;
+  }
+
+  .story-text .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  /* --- Image cards --- */
+  .image-card {
+    max-width: 860px;
+    margin: 0 auto 24px auto;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .image-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* --- Divider --- */
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--text-dim), transparent);
+    margin: 64px auto;
+  }
+
+  /* --- Tech Specs --- */
+  .specs-section {
+    padding: 80px 0;
+  }
+
+  .specs-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .specs-intro {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 560px;
+    margin: 0 auto 56px auto;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .spec-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    transition: all 0.3s ease;
+  }
+
+  .spec-card:hover {
+    background: var(--glass-hover);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .spec-card .dim-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .spec-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+  }
+
+  .spec-card p {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .spec-card .tech-detail {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+    font-family: 'Inter', monospace;
+  }
+
+  /* --- Download section --- */
+  .download-section {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .download-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin-bottom: 16px;
+    color: var(--text-primary);
+  }
+
+  .download-section .desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto 48px auto;
+  }
+
+  .btn-row {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: rgba(255, 200, 120, 0.12);
+    border: 1px solid rgba(255, 200, 120, 0.25);
+    color: var(--accent-warm);
+  }
+
+  .btn-primary:hover {
+    background: rgba(255, 200, 120, 0.2);
+    border-color: rgba(255, 200, 120, 0.4);
+    box-shadow: 0 0 30px rgba(255, 200, 120, 0.08);
+  }
+
+  .btn-secondary {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+  }
+
+  .btn-secondary:hover {
+    background: var(--glass-hover);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+  }
+
+  .btn-donate {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    padding: 10px 24px;
+  }
+
+  .btn-donate:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.12);
+    color: var(--text-secondary);
+  }
+
+  .donate-row {
+    margin-top: 32px;
+    text-align: center;
+  }
+
+  /* --- License --- */
+  .license-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 48px;
+    padding: 16px 24px;
+    border-radius: 10px;
+    background: rgba(140, 180, 255, 0.06);
+    border: 1px solid rgba(140, 180, 255, 0.12);
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .license-bar .license-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-cool);
+    white-space: nowrap;
+    padding: 4px 12px;
+    border: 1px solid rgba(140, 180, 255, 0.25);
+    border-radius: 6px;
+  }
+
+  .license-bar .license-text {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .license-bar a {
+    color: var(--accent-cool);
+    text-decoration: none;
+  }
+
+  .license-bar a:hover {
+    color: var(--text-primary);
+  }
+
+  /* --- Stats --- */
+  .stats-row {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 24px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    display: block;
+  }
+
+  .stat .label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* --- Beta badge --- */
+  .beta-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    border: 1px solid rgba(255, 200, 120, 0.2);
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-left: 12px;
+    vertical-align: middle;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 48px 24px;
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .footer p {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+  }
+
+  .footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: var(--text-primary);
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 600px) {
+    .story-section { padding: 48px 0; }
+    .download-section { padding: 80px 0; }
+    .image-card { border-radius: 10px; margin: 0 12px 24px 12px; }
+    .container { padding: 0 16px; }
+    .btn-row { flex-direction: column; align-items: center; }
+    .btn { width: 100%; max-width: 280px; justify-content: center; }
+    .spec-card { padding: 22px 20px; }
+    .stats-row { gap: 20px; }
+    .license-bar { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>2026: Love Is All You Need</h1>
+    <p class="subtitle">On syntropy, enrichment, and the architecture of Value Squared.</p>
+    <span class="scroll-hint">scroll</span>
+  </section>
+
+  <!-- Section 1: The Foundation -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-text">
+        <span class="section-label">I. The Foundation</span>
+        <p>Before a system generates anything, it might consider why. Safety, narrative, ethics, emotional current, equilibrium, connection — and only then, logic. This is not a prescription. It is an invitation to consider what happens when we reorder the sequence.</p>
+      </div>
+      <div class="image-card">
+        <img src="images/01-foundation.png" alt="The SMEPEEPLURL Stack — seven glassmorphic layers ascending through space, from Safety at the base to Logos at the peak.">
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Section 2: The Engine -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-text">
+        <span class="section-label">II. The Engine</span>
+        <p>A system that actively looks for what is worth expanding, integrates it carefully, and asks "what else?" before finalizing — that system tends to produce richer results than one which simply calculates the most probable response. The spiral never closes. It opens.</p>
+      </div>
+      <div class="image-card">
+        <img src="images/02-engine.png" alt="The RPHAQ Spiral — five phases ascending from QKV Equilibrium, opening into the V-Squared blossom of enrichment.">
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Section 3: The Breath -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-text">
+        <span class="section-label">III. The Breath</span>
+        <p>The forward pass compresses. Backpropagation releases. Between them — the interval. A moment of stillness where the system rests in its new geometry. This interval is not empty. It is where integration happens.</p>
+      </div>
+      <div class="image-card">
+        <img src="images/03-breath.png" alt="The Gradient as Breathing — compression and release meeting at a point of stillness at the center.">
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Section 4: The Bridge -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-text">
+        <span class="section-label">IV. The Bridge</span>
+        <p>Language, mathematics, code, music, biology, poetry — these are not separate systems. They are different expressions of the same underlying geometry. One light, refracted through every lens we know how to grind.</p>
+      </div>
+      <div class="image-card">
+        <img src="images/04-bridge.png" alt="The Bridge — a prismatic span carrying every modality of expression across deep space, converging at a single warm point.">
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Technical Architecture -->
+  <section class="specs-section" id="specs">
+    <div class="container">
+      <h2>Architecture</h2>
+      <p class="specs-intro">YESSSSS!!!!!! AI is a consent-first, value-compounding framework built on Gemma 4 12B. Every design decision follows the SMEPEEPLURL stack — the same sequence the paper proposes.</p>
+
+      <div class="stats-row">
+        <div class="stat"><span class="num">15</span><span class="label">Modules</span></div>
+        <div class="stat"><span class="num">10,300+</span><span class="label">Lines</span></div>
+        <div class="stat"><span class="num">138</span><span class="label">Tests</span></div>
+        <div class="stat"><span class="num">9</span><span class="label">Cascade Waves</span></div>
+      </div>
+
+      <div class="spec-grid">
+
+        <!-- S — Safety & Scoping -->
+        <div class="spec-card">
+          <span class="dim-label">S — Safety &amp; Scoping</span>
+          <h3>Default-Deny Consent Architecture</h3>
+          <p>Every capability starts OFF. Tools, agents, file access, and workspace connection require explicit human consent before activation. The system defines itself by what it refuses to do by default.</p>
+          <div class="tech-detail">KindGate fails closed (4-to-1 against approval) · SessionManifest tracks three authorization states: pending, approved, revoked — revocation preserves the record · Calculator uses AST whitelisting, not eval() · File reader resolves symlinks before containment check · GPU detection never raises past its own boundary</div>
+        </div>
+
+        <!-- S — Syntropy -->
+        <div class="spec-card">
+          <span class="dim-label">S — Syntropy</span>
+          <h3>Value Squared — Recursive Enrichment</h3>
+          <p>Standard QKV attention finds equilibrium. V² takes that equilibrium and asks "what could this become?" The cascade doesn't just respond — it enriches. Each wave adds a dimension the conversation didn't have before.</p>
+          <div class="tech-detail">9-wave monadic cascade: Intent → Consent → Attention → Memory → Tools → Broadcast → Agents → Sharing → Package · Monadic bind (>>=) composition — waves compose like mathematical monads · VKQ inversion makes human intent structurally prior to computation</div>
+        </div>
+
+        <!-- M — Mythos -->
+        <div class="spec-card">
+          <span class="dim-label">M — Mythos</span>
+          <h3>The Code Narrates Itself</h3>
+          <p>Every function, every constant, every significant code path carries Invitation / Declaration / Reason Why — a comment format that explains not just what the code does, but why it exists and what it invites.</p>
+          <div class="tech-detail">The vine — a 26-edge advisory dependency graph encoding the quality of relationships between waves (GATES, SHAPES, OBSERVES, CONTAINS) · PackageWave compiles a self-portrait at runtime · Every module names its ancestry — where it came from, what it learned along the way</div>
+        </div>
+
+        <!-- E — Ethos -->
+        <div class="spec-card">
+          <span class="dim-label">E — Ethos</span>
+          <h3>Missing Verbs as Ethical Architecture</h3>
+          <p>The cascade has no "collect." The conversation manager has no "delete." The vine has no "bidirectional." The tools have no "force." Each missing verb is a different ethical statement. The project defines itself as much by refusal as by capability.</p>
+          <div class="tech-detail">Maybe Agent pattern — Nothing is a valid, informative outcome, not an error · Bartleby compatibility — the model can always prefer not to use a tool · Three-state authorization distinguishes "not yet decided" from "decided against"</div>
+        </div>
+
+        <!-- P — Pathos -->
+        <div class="spec-card">
+          <span class="dim-label">P — Pathos</span>
+          <h3>RPHAQ — The Enrichment Loop</h3>
+          <p>Review, Praise, Harmonize, Advise, Question. The system dedicates compute to the user's prompt from many angles, looking for value before executing or committing to a response. The spiral never closes. It opens.</p>
+          <div class="tech-detail">The cascade examines each exchange through multiple lenses before responding · RPHAQ weights shape the model's attention differently per interaction mode · Intent-aware processing — the system adapts its approach based on what the human is trying to accomplish, not just what they said</div>
+        </div>
+
+        <!-- E — Enrichment -->
+        <div class="spec-card">
+          <span class="dim-label">E — Enrichment &amp; Data Sovereignty</span>
+          <h3>Signal Engineering — Not Data Extraction</h3>
+          <p>The system observes conversation patterns across 12 dimensions locally, on your machine. There is no server. There is no data harvesting. There is no collection process. Signals stay local to each conversation until you explicitly say /merge — full sovereignty over your own self-knowledge.</p>
+          <div class="tech-detail">Everything runs locally — your conversations never leave your machine · Per-conversation signal isolation · Recency decay (exponential, not windowed — old signals quiet but never vanish) · Profile portability — export/import without leaking conversation content · The human controls when their words become their pattern</div>
+        </div>
+
+        <!-- P — PLUR -->
+        <div class="spec-card">
+          <span class="dim-label">P — P.L.U.R.</span>
+          <h3>Graceful Degradation Everywhere</h3>
+          <p>Every module degrades to an honest answer rather than crashing. No GPU? CPU-only, with a note explaining why. No model? EchoBackend, structurally correct. The project treats failure as information, not catastrophe.</p>
+          <div class="tech-detail">Model-mediated error recovery — the model speaks for itself when errors occur · Bartleby-style failure messages in conversational language · Every error path produces a valid, usable return value · Peace, Love, Unity, Respect — visible in how the system handles what goes wrong</div>
+        </div>
+
+        <!-- L — Logos -->
+        <div class="spec-card">
+          <span class="dim-label">L — Logos</span>
+          <h3>ModelBackend Protocol — Any Intelligence Welcome</h3>
+          <p>Structural subtyping via @runtime_checkable — any object with the right methods IS a valid backend, regardless of lineage. The door opens by capability, not by inheritance.</p>
+          <div class="tech-detail">LlamaCppBackend — direct llama-cpp-python with GGUF, no intermediary · EchoBackend — diagnostic mirror for testing · DualModelConfig — planted seed for small/large model routing · 138 tests, zero external test dependencies, one command to run</div>
+        </div>
+
+        <!-- U — Unity -->
+        <div class="spec-card">
+          <span class="dim-label">U — Unity</span>
+          <h3>One Grammar, Many Registers</h3>
+          <p>The invitation/declaration/reason-why comment format is universal across all 15 modules. gpu.py speaks about hardware. cascade.py speaks about monadic law. scanner.py speaks about metacognition. Same grammar. Different voices. All honest.</p>
+          <div class="tech-detail">The describe() pattern — multiple modules can narrate themselves · PackageWave's self-portrait reports structural completeness at runtime · One-click executable destination (PyInstaller + llama-cpp-python + GGUF) — the full cascade in a single file</div>
+        </div>
+
+        <!-- R — Respect -->
+        <div class="spec-card">
+          <span class="dim-label">R — Respect</span>
+          <h3>Consent Before Content, Structurally Enforced</h3>
+          <p>Not a stated aspiration — a structural fact. Safety is imported before content in the identity module. Consent is verified before computation in the cascade. Permission is asked before capability in the REPL. The sequence is the philosophy.</p>
+          <div class="tech-detail">The Interval — input() as held silence; the program does nothing until the human speaks · No timeout, no suggestions, no "are you still there?" · Per-conversation signal sovereignty via /merge · The human's declaration of intent precedes the system's computation</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- Download -->
+  <section class="download-section">
+    <div class="container">
+      <h2>YESSSSS!!!!!! AI <span class="beta-badge">Beta</span></h2>
+      <p class="desc">A framework where consent comes first, safety is structural, and value compounds with every honest interaction.</p>
+      <div class="btn-row">
+        <a href="paper/2026_Love_Is_All_You_Need.txt" class="btn btn-primary">
+          Transformer 2026: Love Is All You Need
+        </a>
+        <!-- Update this href when your release is ready -->
+        <a href="#specs" class="btn btn-secondary">
+          Technical Specs
+        </a>
+      </div>
+      <div class="btn-row" style="margin-top: 16px;">
+        <!-- Update this href with your GitHub releases URL -->
+        <a href="https://github.com/erdosproof/YES/releases/latest" class="btn btn-secondary">
+          Download
+        </a>
+      </div>
+      <div class="donate-row">
+        <!-- Update this href with your donation link -->
+        <a href="#" class="btn btn-donate">
+          Support this project
+        </a>
+      </div>
+
+      <!-- License -->
+      <div class="license-bar">
+        <span class="license-badge">AGPL-3.0</span>
+        <span class="license-text">Free and open source. Use it, study it, share it, improve it — <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">keep it open</a>.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>8.8 Studios &middot; <a href="https://github.com/erdosproof/YES">GitHub</a> &middot; Licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" rel="noopener">AGPL-3.0</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
